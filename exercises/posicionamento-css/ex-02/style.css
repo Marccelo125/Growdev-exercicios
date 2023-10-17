@@ -1,0 +1,27 @@
+/* Exercício 2 */
+.quadrados {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  position: absolute;
+}
+
+.quadrados.cima-esquerda {
+  top: 0;
+  left: 0;
+}
+
+.quadrados.cima-direita {
+  top: 0;
+  right: 0;
+}
+
+.quadrados.baixo-esquerda {
+  bottom: 0;
+  left: 0;
+}
+
+.quadrados.baixo-direita {
+  bottom: 0;
+  right: 0;
+}
