@@ -1,21 +1,53 @@
-alert("Olá Mundo!")
+// EXERCÍCIO 1
 
-// string
-let nome = "Marcelo"
+// let alunoNota1 = 7
+// let alunoNota2 = 5
+// let alunoNota3 = 3
 
-// number
-let idade = 19
-let peso = 59.2
+// let peso1 = 3
+// let peso2 = 5
+// let peso3 = 3
 
-// boolean
-let estaChovendo = true
-let parouDeChover = false
+// const media = (alunoNota1 * peso1 + alunoNota2 * peso2 + alunoNota3 * peso3) / 10
 
-// variavel vazia
-let sobrenome
+// if (media >= 7) {
+//     console.log(`APROVADO! Sua média total foi: ${media}`)
+// } else {
+//     console.log(`REPROVADO! Estude mais pois sua média total foi: ${media}`)
+// }
 
-// preenchendo variavel vazia
-sobrenome = "Duarte"
+// EXERCÍCIO 2
+// Com a data de hoje 18/10/2023
 
-// imprimir mensagem
-console.log(`Olá, meu nome é ${nome} e minha idade é ${idade} anos.`)
+// let anos = 35
+// let meses = 10
+// let dias = 18
+
+// const idadeEmDias = (anos * 365) + (meses * 30) + dias
+// const idadeEmMeses = anos * 30
+
+// console.log(`${anos} anos você tem:\n
+// ${idadeEmDias} Meses\n
+// ${idadeEmMeses} Dias`)
+
+// EXERCÍCIO 3
+const num1 = 10
+const num2 = 5
+
+let operador = "+"
+let resultado = "Operador Inválido"
+
+if (operador === "+") {
+    resultado = num1 + num2
+}
+if (operador === "-") {
+    resultado = num1 - num2
+}
+if (operador === "*") {
+    resultado = num1 * num2
+}
+if (operador === "/") {
+    resultado = num1 / num2
+}
+
+console.log("Resultado:", resultado)
