@@ -118,8 +118,8 @@ function exercicio07 () {
         if (valorSaque > 0) {
             const taxaSaque = valorSaque + 4.5
             if (taxaSaque < saldoCliente) {
-                const valorRetirado = saldoCliente + taxaSaque
-                document.write("Você retirou: R$", valorRetirado, " Seu novo saldo é: R$", valorRetirado)
+                const valorRetirado = saldoCliente - taxaSaque
+                document.write("Você retirou: R$", taxaSaque, " Seu novo saldo é: R$", valorRetirado)
             } else {
                 document.write("Saldo insuficiente (Lembre-se da taxa de R$4.50")
             }
