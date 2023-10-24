@@ -214,4 +214,6 @@ switch (selecionarExercicio) {
     case 9:
         exercicio09()
         break
+    default:
+        document.write(`Digite um número até de 1 até 9`)
 }
