@@ -110,7 +110,7 @@ document.write("Resultado:", resultado)
 function exercicio07 () {
     let saldoCliente = 1000
 
-    const valorSaque = Number(prompt("Digite o valor que deseja sacar:"))
+    const valorSaque = Number(prompt("Digite o valor que deseja sacar:\nSaldo Atual R$" + saldoCliente))
     
     // // MODELO 01
     
@@ -184,7 +184,7 @@ function exercicio09 () {
     }
 }
 
-let selecionarExercicio = Number(prompt("Digite o Exercício que deseja testar:\n1. Exercício 01\n2. Exercício 02\n3. Exercício 03\n4. Exercício 04\n5. Exercício 05\n6. Exercício 06\n7. Exercício 07\n8. Exercício 08\n9. Exercício 09\n0. Sair"))
+let selecionarExercicio = Number(prompt("Digite o Exercício que deseja testar:\n1. Celsius para Fahrenheit\n2. Dia da Semana\n3. Positivo, Negativo ou Zero\n4. Custo carro novo\n5. Calculo IMC\n6. Calculadora\n7. Caixa Eletrônico\n8. Tabela Atletas\n9. Sistema Pardal\n0. Sair"))
 
 switch (selecionarExercicio) {
     case 1:
