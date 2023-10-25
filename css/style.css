@@ -15,7 +15,7 @@ body {
 }
 
 #menu-navegacao li{
-    display: inline-block;
+    display: inline-flex;
     padding: 20px 15px 20px 10px;
     max-width: 100vh;
 }
@@ -27,7 +27,6 @@ body {
     text-decoration: none;
 }
 
-<<<<<<< HEAD
 .caixa-de-informacao article {
     margin-left: 10%;
     margin-right: 10%;
@@ -55,6 +54,11 @@ body {
     text-align: center;
     text-decoration: none;
     padding: 20px;
+
+}
+
+.lista-exercicios a {
+    border: 5px black solid;
 }
 
 .lista-exercicios li a:hover {
@@ -62,28 +66,4 @@ body {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-=======
-h1 {
-    text-align: center;
-    padding: 1rem;
-    margin: 20px 20px 20px 25vh;
-    max-width: 50%;
-
-    border: 2px rgb(182, 162, 255) solid;
-    border-radius: 20px;
-    background-color: rgb(250, 252, 255);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.titulo-exercicio {
-    text-align: left;
-    font-size: medium;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-
-    margin: 10px;
-}
-
-.links-exercicios {
-    margin-left: 10px;
->>>>>>> ea9c0aa295d538a1254d2adcbdfd6bf47f815fd2
 }
