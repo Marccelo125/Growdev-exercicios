@@ -187,6 +187,8 @@ function exercicio09 () {
 let selecionarExercicio = Number(prompt("Digite o Exercício que deseja testar:\n1. Celsius para Fahrenheit\n2. Dia da Semana\n3. Positivo, Negativo ou Zero\n4. Custo carro novo\n5. Calculo IMC\n6. Calculadora\n7. Caixa Eletrônico\n8. Tabela Atletas\n9. Sistema Pardal\n0. Sair"))
 
 switch (selecionarExercicio) {
+    case 0:
+        break
     case 1:
         exercicio01()
         break

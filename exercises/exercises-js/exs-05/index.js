@@ -74,6 +74,8 @@ let selecionarExercicio = Number(prompt("Digite o Exercício que deseja testar:\
 
 
 switch (selecionarExercicio) {
+    case 0:
+        break
     case 1:
         exercise01()
         break
