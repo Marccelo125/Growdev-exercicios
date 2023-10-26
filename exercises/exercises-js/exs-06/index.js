@@ -31,28 +31,163 @@ function exercise01() {
 // a. Lucas e Pedro tenham o mesmo tamanho;
 // b. Lucas seja maior que Pedro.
 
-let pedroHeight = 1.5
-let lucasHeight = 1.1
-let years = 0
-
-const pedroGrow = 0.02
-const lucasGrow = 0.03
-
-while (pedroHeight >= lucasHeight) {
-    pedroHeight += pedroGrow
-    lucasHeight += lucasGrow
-    years++
+function exercise02() {
+    let pedroHeight = 1.5
+    let lucasHeight = 1.1
+    let years = 0
+    
+    const pedroGrow = 0.02
+    const lucasGrow = 0.03
+    
+    while (pedroHeight >= lucasHeight) {
+        pedroHeight += pedroGrow
+        lucasHeight += lucasGrow
+        years++
+    }
+    console.log(`Pedro: ${pedroHeight.toFixed(2)}`);
+    console.log(`Lucas: ${lucasHeight.toFixed(2)}`);
+    console.log(`Lucas e Pedro tenham o mesmo tamanho: ${years - 1} Anos.`);
+    console.log(`Lucas seja maior que Pedro: ${years} Anos.`);
 }
-console.log(`Pedro: ${pedroHeight.toFixed(2)}`);
-console.log(`Lucas: ${lucasHeight.toFixed(2)}`);
-console.log(`Lucas e Pedro tenham o mesmo tamanho: ${years - 1} Anos.`);
-console.log(`Lucas seja maior que Pedro: ${years} Anos.`);
-
 
 
 // Execício 03
+// Escreva um algoritmo que faça a tabuada de um número e
+// apresente o resultado de acordo com o modelo a seguir, sabendo
+// que o multiplicando deverá ser fornecido pelo usuário (n) e a
+// quantidade de iterações também (i).
+
+function exercise03() {
+    const valorTabuada = Number(prompt("Digite o número da tabuada:"))
+    const iteracoes = Number(prompt("Digite a quantidade de iterações:"))
+
+    for (let i = 0; i <= iteracoes; i++) {
+        let calculo = valorTabuada * i
+        document.write(`${valorTabuada} X ${i} = ${calculo}`)
+    }
+}
+
 // Execício 04
+// Escreva um algoritmo que percorra os números inteiros entre 1 e 250
+// e verifique quais números são múltiplos de 3 e quais são múltiplos
+// de 5.
+
+function exercise04() { 
+    let multiplo3 = ""
+    let multiplo5 = ""
+
+    for(let i = 0; i < 250; i++) {
+        if (i % 3 == 0) {
+            multiplo3 += i + ", "
+        }
+        if (i % 5 == 0) {
+            multiplo5 += i + ", "
+        }
+    }
+    document.write (`<strong>Divisível por 3:</strong> ${multiplo3} <br />`)
+    document.write (`<br /> <strong>Divisível por 5:</strong> ${multiplo5}`)
+}
+
 // Execício 05
+// Faça um programa usando a estrutura “for” que leia um número
+// inteiro positivo e mostre na tela uma contagem de 0 até o valor
+// digitado.
+
+function exercise05() {
+    const numeroIntPositivo = Number(prompt("Digite um número INTEIRO E POSITIVO:"));
+    let contagem = "Contando: ";
+
+    for (let i = 0; i <= numeroIntPositivo; i++) {
+        console.log(i)
+        contagem += i + " ";
+    }
+    document.write(contagem)
+}
+
 // Execício 06
+// Desenvolva um algoritmo que mostre uma contagem regressiva de
+// 30 até 1, marcando os números que forem primos, exatamente
+// como mostrado abaixo:
+
+function exercise06() {
+    for (let i = 30; i >= 1; i--) {
+        let primo = true;
+    
+        for (let j = 2; j < i; j++) {
+            if (i % j === 0) {
+                primo = false;
+                break;
+            }
+        }
+        if (primo) {
+            contagem += `[${i}] ,`
+        } else {
+            contagem += i + ","
+        }
+    }
+}
+
+
 // Execício 07
-// Execício 08
+// Desenvolva um algoritmo que leia 10 números, calcule e escreva a
+// média aritmética dos valores lidos, a quantidade de valores
+// positivos, a quantidade de valores negativos e o percentual de
+// valores negativos e positivos.
+
+
+function exercise07() {
+    let totalSomado = 0
+    let numerosPositivos = 0
+    let numerosNegativos = 0
+    
+    for (let i = 0; i <= 10; i++) {
+        let lerNumero = Number(prompt("Digite um número:"));
+        totalSomado += lerNumero
+    
+        if (lerNumero >= 0) {
+            numerosPositivos++
+        } else {
+            numerosNegativos++
+        }
+    }
+    
+    let mediaNumeros = totalSomado / 10
+    let porcentagemPositivos = (numerosPositivos / 10) * 100
+    let porcentagemNegativos = (numerosNegativos / 10) * 100
+    
+    console.log(`Média aritimetica: ${mediaNumeros}`)
+    console.log(`Total de números POSITIVOS: ${numerosPositivos}`);
+    console.log(`Total de números NEGATIVOS: ${numerosNegativos}`);
+    console.log(`Média de números POSITIVOS: ${porcentagemPositivos}`);
+    console.log(`Média de números NEGATIVOS: ${porcentagemNegativos}`);
+}
+
+let selecionarExercicio = Number(prompt("Digite o Exercício que deseja testar:\n1. Maior/menor Altura\n2. Pedro e Lucas Alturas\n3. Tabuada com limite\n4. Multiplos de 3 e 5\n5. Inteiro e positivo\n6. Contagem regressiva (primos)\n7. Média aritimetica\n0. Sair"))
+
+switch (selecionarExercicio) {
+    case 0:
+        break
+    case 1:
+        exercicio01()
+        break
+    case 2:
+        exercicio02()
+        break
+    case 3:
+        exercicio03()
+        break
+    case 4:
+        exercicio04()
+        break
+    case 5:
+        exercicio05()
+        break
+    case 6:
+        exercicio06()
+        break
+    case 7:
+        exercicio07()
+        break
+    default:
+        document.write(`Digite um número até de 1 até 7`)
+}
