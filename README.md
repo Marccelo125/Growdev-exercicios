@@ -4,7 +4,7 @@
 <img src="https://labs.detectify.com/wp-content/uploads/2022/11/should-you-learn-how-to-code-before-you-learn-hacking.png" width="1000"></img> 
 
 > [!NOTE]
-> O curso completo conta com 12 messes de conteúdo para a capacitação profissional Desenvolvedor Web Full Stack.
+> O curso completo conta com 12 meses de conteúdo para a capacitação profissional Desenvolvedor Web Full Stack.
 > Este repositório será alterado e melhorado conforme o avanço do curso.
 
 > [!WARNING]
