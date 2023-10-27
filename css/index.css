@@ -250,3 +250,20 @@ nav {
     font-size: 100%;
     text-align: center;
 }
+
+footer {
+    text-align: center;
+    align-content: space-between;
+    justify-items: center;
+
+    display: flex;
+    flex-flow: row wrap;
+    background-color: var(--tertiary-color) ;
+    font-size: small;
+    padding: 10px;
+}
+
+
+footer a{
+    text-decoration: none;
+}
