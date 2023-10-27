@@ -251,19 +251,26 @@ nav {
     text-align: center;
 }
 
-footer {
-    text-align: center;
-    align-content: space-between;
-    justify-items: center;
 
-    display: flex;
-    flex-flow: row wrap;
-    background-color: var(--tertiary-color) ;
+footer {
+    color: var(--primary-font-color);
+    text-align: center;
     font-size: small;
-    padding: 10px;
+    background-color: var(--tertiary-color);
+    padding: 10px 0 10px 0;
 }
 
-
-footer a{
+footer a {
+    margin-right: 1%;
     text-decoration: none;
+    color: rgb(25, 0, 255);
+}
+
+footer a:nth-child(1) {
+    margin-left: 1px;   
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: aliceblue;
 }
