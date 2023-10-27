@@ -1,0 +1,52 @@
+.conteudo-sobre {
+    align-content: center;
+    align-self: center;
+    justify-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+
+    color: var(--primary-font-color);
+    background-color: var(--dark-primary);
+    border: 2px solid var(--dark-primary);
+    border-radius: 10px;
+    padding: 2%;
+    margin: 5% 10% 5% 10%;
+}
+
+.conteudo-sobre h1 {
+    font-size: 300%;
+}
+
+.conteudo-sobre h2 {
+    margin-top: 2%;
+    font-size: 250%;
+}
+
+.conteudo-sobre a {
+    color: var(--primary-font-color);
+    text-decoration: none;
+    font-size: large;
+}
+
+.conteudo-sobre p {
+    border: 2px solid var(--dark-secondary);
+    border-radius: 10px;
+    background-color: var(--dark-secondary);
+    
+    padding: 10px;
+    font-size: 110%;
+    text-align: justify;
+    margin: 1% 10% 1% 10%;
+}
+
+#portifolio-link {
+    color: rgb(228, 84, 185);
+}
+
+#growdev-link {
+    color: rgb(221, 157, 38);
+}
+
+#sicredi-link {
+    color: rgb(22, 194, 80);
+}

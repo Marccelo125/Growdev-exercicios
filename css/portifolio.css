@@ -1,0 +1,92 @@
+.conteudo-portifolio {
+    align-content: center;
+    align-self: center;
+    justify-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+
+    color: var(--primary-font-color);
+    background-color: var(--dark-primary);
+    border: 2px solid var(--dark-primary);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.foto-top {
+    margin-top: 1%;
+    border: 5px solid var(--dark-primary);
+    border-radius: 10%;
+    width: 200px;
+    height: 200px;
+}
+
+#nome-main {
+    margin: 1% 0 1% 0;
+    font-size: 500%;
+    text-align: center;
+}
+
+.endereco-contato p {
+    margin-left: 5px;
+    margin-top: 0px;
+    font-size: 22px;
+}
+
+.endereco-contato a {
+    text-decoration: none;
+}
+
+.descricao {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.descricao p {
+    font-size: 20px;
+}
+
+#email-link {
+    font-size: 105%;
+    color: var(--primary-color);
+}
+
+.growdev-link {
+    color: steelblue;
+    text-decoration: none;
+}
+
+.sicredi-link {
+    color: green;
+    text-decoration: none;
+}
+
+#redes-sociais {
+    display: flex;
+    justify-content: center;
+}
+
+#redes-sociais img{
+    display: inline-flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 20%;
+    width: 60px;
+    height: 60px;
+}
+
+#redes-sociais img:hover {
+    display: inline-flex;
+    width: 65px;
+    height: 65px;
+    margin-top: 5px;
+    margin-right: 20px;
+
+    border-radius: 20%;
+    border: 5px solid var(--secondary-color);
+    transition: border 0.2s;
+}
+
+#redes-sociais a {
+    text-decoration: none;
+}
