@@ -58,11 +58,11 @@ nav {
     flex-flow: row wrap;
     padding: 20px;
     list-style: none;
-    background-color: var(--primary-color);
+    background-color: var(--dark-primary);
 
     /* Aplicando border-radius apenas no topo */
     border-radius: 0 0 20px 20px;
-    border-top: 2px solid var(--primary-color);
+    border-top: 2px solid var(--dark-primary);
 }
 
 .menu-navegacao li{
@@ -70,7 +70,7 @@ nav {
     font-size: 130%;
     margin: 0 3% 0 3%;
     max-width: 100vh;
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--dark-secondary);
     border-radius: 10px;
 }
 
