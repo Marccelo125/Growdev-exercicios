@@ -168,25 +168,25 @@ switch (selecionarExercicio) {
     case 0:
         break
     case 1:
-        exercicio01()
+        exercise01()
         break
     case 2:
-        exercicio02()
+        exercise02()
         break
     case 3:
-        exercicio03()
+        exercise03()
         break
     case 4:
-        exercicio04()
+        exercise04()
         break
     case 5:
-        exercicio05()
+        exercise05()
         break
     case 6:
-        exercicio06()
+        exercise06()
         break
     case 7:
-        exercicio07()
+        exercise07()
         break
     default:
         document.write(`Digite um número até de 1 até 7`)
