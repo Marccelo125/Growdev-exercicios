@@ -1,0 +1,53 @@
+.titulo-da-pagina {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    overflow: hidden;
+    min-width: 500px;
+}
+
+.titulo-da-pagina header {
+    color: --primary-font-color;
+}
+
+iframe {
+    border: 2px solid var(--dark-primary);
+    border-radius: 20px;
+    margin-bottom: 0;
+}
+
+.conteudo-principal {
+    background-color: var(--dark-primary);
+    border: 2px solid --dark-primary;
+    border-radius: 20px;
+    color: var(--primary-font-color);
+    padding: 2%;
+    margin: 4% 15% 4% 15%;
+
+    justify-content: center;
+    font-size: 200%;
+    font-family: 'Merriweather Sans';
+    text-align: center;
+}
+
+.botao-link a {
+    display: flex;
+    justify-content: center;
+    font-size: 80%;
+    padding: 5px;
+    color: var(--primary-font-color);
+    background-color: var(--primary-variant);
+    border: 2px solid var(--primary-variant);
+    border-radius: 5px;
+    margin: 1% 15% 0 15%;
+    text-decoration: none;
+    transition: background-color 0.25s, color 0.25s, border 0.25s;
+}
+
+.botao-link a:hover {
+    color: var(--primary-font-color);
+    background-color: var(--primary-color);
+    border: 2px solid var(--dark-secondary);
+    border-radius: 5px;
+}
