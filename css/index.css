@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Merriweather+Sans&display=swap');
+
+:root {
+    /* Cores principais do site */
+    --primary-color: #BB86FC;
+    --primary-variant: #3700B3;
+    
+    --secondary-color: #05DAC5;
+    --tertiary-color: #7d49f7; 
+       
+    /* Cores por trás do texto */
+    --background-color: #161616;
+    --surface-color: #121212;
+
+    --dark-primary: #1F1B24;
+    --dark-secondary: #332940;
+
+    --error-color: #CF6679;
+    
+    /* Cores do texto */
+    --primary-font-color: white;
+
+    /* Site referência do design: 
+    https://m2.material.io/design/color/dark-theme.html#implementation
+    */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    block-size: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background-color)
+}
+
+nav {
+    background-color: var(--background-color)
+}
+
+.top-color {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    min-height: 10px;
+    background-color: var(--tertiary-color);
+}
+
+.menu-navegacao ul{
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 20px;
+    list-style: none;
+    background-color: var(--primary-color);
+
+    /* Aplicando border-radius apenas no topo */
+    border-radius: 0 0 20px 20px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.menu-navegacao li{
+    padding: 6px 15px 6px 15px;
+    font-size: 130%;
+    margin: 0 3% 0 3%;
+    max-width: 100vh;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.menu-navegacao li:hover {
+    padding: 5px 15px 5px 15px;
+    background-color: var(--tertiary-color);
+    border: 2px solid var(--tertiary-color);
+    border-radius: 10px;
+    transition: background-color 0s, border 0.1s;
+}
+
+.menu-navegacao a {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 120%;
+    color: var(--primary-font-color);
+    text-decoration: none;
+}
+
+
+.wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    overflow: hidden;
+    min-width: 500px;
+}
+
+.wrapper .texto-estatico {
+    color: var(--primary-font-color);
+    font-size: 40px;
+}
+
+.texto-estatico {
+    font-family: 'Poppins', sans-serif;
+    font-size: 350%;
+    text-align: center;
+}
+
+.wrapper .texto-dinamico {
+    margin-left: 15px;
+    height: 60px;
+}
+
+.wrapper .texto-dinamico li {
+    list-style: none;
+    font-size: 40px;
+    position: relative;
+    color: var(--primary-color);
+    top: 0;
+    animation: slide 8s steps(4) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -240px;
+    }
+}
+
+.wrapper .texto-dinamico li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--background-color);
+    border-left: 2px solid var(--primary-color);
+    animation: typing 2s steps(15) infinite;
+}
+
+@keyframes typing {
+    40%, 60% {
+        left: 105%;
+    }
+    100% {
+        left: 0;
+        
+    }
+}
+
+
+.wrapper .texto-dinamico li:nth-of-type(3)::after {
+    animation-name: typing-short-designer;
+    animation-timing-function: steps(15);
+
+} 
+.wrapper .texto-dinamico li:nth-of-type(4)::after {
+    animation-name: typing-short-growdever;
+    animation-timing-function: steps(15);
+}
+
+@keyframes typing-short-growdever {
+    40%, 60% {
+        left: 72%;
+    }
+    100% {
+        left: 0;
+        
+    }
+}
+
+@keyframes typing-short-designer {
+    40%, 60% {
+        left: 60%;
+    }
+    100% {
+        left: 0;
+        
+    }
+}
+
+.conteudo-principal {
+    background-color: var(--dark-primary);
+    border: 2px solid --dark-primary;
+    border-radius: 20px;
+    color: var(--primary-font-color);
+    padding: 20px;
+
+    justify-content: center;
+    font-size: 200%;
+    font-family: 'Merriweather Sans';
+    text-align: center;
+}
+
+.curso header {
+    font-size: 100%;
+    text-align: center;
+}
+
+.curso  h3 {
+    margin-bottom: 20px;
+}
+
+.texto-main {
+    font-size: 60%;
+    text-align: justify;
+    
+    margin: 0 30px 0 30px;
+    padding: 20px;
+    
+    border: 2px solid var(--dark-secondary);
+    border-radius: 10px;
+
+    background-color: var(--dark-secondary);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.botao-saiba-mais {
+    display: flex;
+    justify-content: center;
+    font-size: 80%;
+    padding: 5px;
+    color: var(--primary-font-color);
+    background-color: var(--primary-variant);
+    border: 2px solid var(--primary-variant);
+    border-radius: 5px;
+    margin: 10px 30px 0 30px;
+    text-decoration: none;
+    transition: background-color 0.25s, color 0.25s, border 0.25s;
+}
+
+.botao-saiba-mais:hover {
+    color: black;
+    background-color: var(--primary-color);
+    border: 2px solid var(--background-color);
+    border-radius: 5px;
+}
+
+.portifolio header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 100%;
+    text-align: center;
+}
+
+.exercicios header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 100%;
+    text-align: center;
+}
