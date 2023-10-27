@@ -1,4 +1,10 @@
 .conteudo-portifolio {
+    align-content: center;
+    align-self: center;
+    justify-items: center;
+    flex-flow: row wrap;
+    text-align: center;
+
     color: var(--primary-font-color);
     background-color: var(--dark-primary);
     border: 2px solid var(--dark-primary);
@@ -7,18 +13,11 @@
 }
 
 .foto-top {
-    display: flex;
-
     margin-top: 1%;
     border: 5px solid var(--dark-primary);
     border-radius: 10%;
     width: 200px;
     height: 200px;
-}
-
-#align-foto {
-    align-content: center;
-    justify-content: center;
 }
 
 #nome-main {
@@ -28,7 +27,6 @@
 }
 
 .endereco-contato p {
-    text-align: justify;
     margin-left: 5px;
     margin-top: 0px;
     font-size: 22px;
@@ -41,7 +39,6 @@
 .descricao {
     margin-top: 2%;
     margin-bottom: 2%;
-    text-align: center;
 }
 
 .descricao p {
@@ -65,9 +62,7 @@
 
 #redes-sociais {
     display: flex;
-    align-content: center;
     justify-content: center;
-    flex-flow: row wrap;
 }
 
 #redes-sociais img{
