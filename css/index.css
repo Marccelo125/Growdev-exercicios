@@ -44,6 +44,21 @@ nav {
     background-color: var(--background-color)
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--dark-primary);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--tertiary-color);
+    border-radius: 10px;
+    border: 3px solid var(--dark-primary);
+}
+
+
 .top-color {
     display: flex;
     justify-content: center;
