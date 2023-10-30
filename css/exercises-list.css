@@ -40,7 +40,7 @@ iframe {
     background-color: var(--primary-variant);
     border: 2px solid var(--primary-variant);
     border-radius: 5px;
-    margin: 1% 15% 0 15%;
+    margin: 1% 25% 0 25%;
     text-decoration: none;
     transition: background-color 0.25s, color 0.25s, border 0.25s;
 }
@@ -50,4 +50,8 @@ iframe {
     background-color: var(--primary-color);
     border: 2px solid var(--dark-secondary);
     border-radius: 5px;
+    padding: 5px;
+    margin: 1% 26% 0 26%;
+
+    transition: padding 0.3s, background-color 0.3s, margin 0.3s;
 }
