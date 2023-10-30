@@ -1,4 +1,4 @@
-valorSaque = parseInt(prompt("Digite o valor para saque:"))
+valorSaque = Number(prompt("Digite o valor para saque:"))
 
 let nota50 = 0
 let nota10 = 0
