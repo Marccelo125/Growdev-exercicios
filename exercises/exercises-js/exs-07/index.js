@@ -5,7 +5,7 @@ let nota10 = 0
 let nota5 = 0
 let nota1 = 0
 
-console.log(`Valor para saque: GC$${valorSaque}`);
+document.write(`Valor para saque: GC$${valorSaque}<br />`);
 
 while (valorSaque > 0) {
     if (valorSaque >= 50) {
@@ -23,7 +23,7 @@ while (valorSaque > 0) {
     }
 }
 
-console.log(`GC$ 50,00 -> ${nota50}`)
-console.log(`GC$ 10,00 -> ${nota10}`)
-console.log(`GC$ 5,00 -> ${nota5}`)
-console.log(`GC$ 1,00 -> ${nota1}`)
+document.write(`GC$ 50,00 -> ${nota50}<br />`)
+document.write(`GC$ 10,00 -> ${nota10}<br />`)
+document.write(`GC$ 5,00 -> ${nota5}<br />`)
+document.write(`GC$ 1,00 -> ${nota1}`)
