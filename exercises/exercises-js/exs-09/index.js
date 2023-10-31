@@ -355,7 +355,7 @@ function exercise17() {
 // parcela e o preço total da compra e imprima no console.
 
 function exercise18() {
-    const precoCompra = Number(prompt("Qual o valor total da compra?"))
+    const precoCompra = Number(prompt("Digite o valor total da compra?"))
     const metodoPagamento = Number(prompt("Selecione o método de pagamento:\n1. Á Vista (Desconto de 2.5%)\n2. 2 á 5 vezes (sem juros)\n3. 6 á 10 vezes (6% de juros)\n4. 11 á 15 vezes (13% de juros)"))
     let precoFinal = 0
 
