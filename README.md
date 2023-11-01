@@ -1,7 +1,7 @@
 # [Repositório](https://marccelo125.github.io/Growdev-exercicios/)  do curso Web Full Stack
 ## Curso na [Growdev](https://www.growdev.com.br) Patrocinado pela [Sicredi Pioneira](https://sicredipioneira.com.br)
 
-<img src="https://labs.detectify.com/wp-content/uploads/2022/11/should-you-learn-how-to-code-before-you-learn-hacking.png" width="1000"></img> 
+<img src="https://unblast.com/wp-content/uploads/2022/08/Programmer-Illustration.jpg" width="1000"></img> 
 
 > [!NOTE]
 > O curso completo conta com 12 meses de conteúdo para a capacitação profissional Desenvolvedor Web Full Stack.
