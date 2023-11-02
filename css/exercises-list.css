@@ -1,14 +1,13 @@
 .titulo-da-pagina {
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 5%;
     overflow: hidden;
     min-width: 500px;
 }
 
 .titulo-da-pagina header {
-    color: --primary-font-color;
+    color: var(--primary-font-color);
 }
 
 iframe {
@@ -19,16 +18,31 @@ iframe {
 
 .conteudo-principal {
     background-color: var(--dark-primary);
-    border: 2px solid --dark-primary;
+    border: 2px solid var(--dark-primary);
     border-radius: 20px;
     color: var(--primary-font-color);
     padding: 2%;
     margin: 5% 15% 5% 15%;
-
     justify-content: center;
     font-size: 200%;
     font-family: 'Merriweather Sans';
     text-align: center;
+}
+
+#projeto-final {
+    color: var(--primary-color);
+    margin-bottom: 2%;
+}
+
+summary {
+    cursor: pointer;
+    margin-top: 2%;
+    border: 2px solid var(--dark-secondary);
+    border-radius: 15px;
+    background-color: var(--dark-secondary);
+    text-align: justify;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .botao-link a {
@@ -52,6 +66,5 @@ iframe {
     border-radius: 5px;
     padding: 5px;
     margin: 1% 26% 0 26%;
-
     transition: padding 0.3s, background-color 0.3s, margin 0.3s;
 }
