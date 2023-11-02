@@ -4,7 +4,6 @@
     justify-items: center;
     flex-flow: row wrap;
     text-align: center;
-
     color: var(--primary-font-color);
     background-color: var(--dark-primary);
     border: 2px solid var(--dark-primary);
@@ -32,7 +31,6 @@
     border: 2px solid var(--dark-secondary);
     border-radius: 10px;
     background-color: var(--dark-secondary);
-    
     padding: 10px;
     font-size: 110%;
     text-align: justify;

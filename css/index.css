@@ -5,44 +5,38 @@
     /* Cores principais do site */
     --primary-color: #BB86FC;
     --primary-variant: #3700B3;
-    
     --secondary-color: #05DAC5;
-    --tertiary-color: #7d49f7; 
-       
+    --tertiary-color: #7d49f7;
+    
     /* Cores por trás do texto */
     --background-color: #161616;
     --surface-color: #121212;
-
     --dark-primary: #1F1B24;
     --dark-secondary: #332940;
-
     --error-color: #CF6679;
     
     /* Cores do texto */
     --primary-font-color: white;
     --secondary-font-color: rgb(240, 240, 240);
-
-    /* Site referência do design: 
-    https://m2.material.io/design/color/dark-theme.html#implementation
-    */
 }
 
 * {
     padding: 0;
     margin: 0;
-    block-size: border-box;
+    box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
 main {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: var(--background-color)
+    background-color: var(--background-color);
 }
 
 nav {
-    background-color: var(--background-color)
+    background-color: var(--background-color);
 }
 
 body::-webkit-scrollbar {
@@ -59,7 +53,6 @@ body::-webkit-scrollbar-thumb {
     border: 3px solid var(--dark-primary);
 }
 
-
 .top-color {
     display: flex;
     justify-content: center;
@@ -68,20 +61,19 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--tertiary-color);
 }
 
-.menu-navegacao ul{
+.menu-navegacao ul {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     padding: 20px;
     list-style: none;
     background-color: var(--dark-primary);
-
     /* Aplicando border-radius apenas no topo */
     border-radius: 0 0 20px 20px;
     border-top: 2px solid var(--dark-primary);
 }
 
-.menu-navegacao li{
+.menu-navegacao li {
     padding: 6px 15px 6px 15px;
     font-size: 130%;
     margin: 0 3% 0 3%;
@@ -104,7 +96,6 @@ body::-webkit-scrollbar-thumb {
     color: var(--primary-font-color);
     text-decoration: none;
 }
-
 
 .wrapper {
     display: flex;
@@ -164,10 +155,8 @@ body::-webkit-scrollbar-thumb {
     }
     100% {
         left: 0;
-        
     }
 }
-
 
 .wrapper .texto-dinamico li:nth-of-type(3)::after {
     animation-name: typing-short-designer;

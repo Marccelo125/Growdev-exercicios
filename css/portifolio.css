@@ -1,10 +1,9 @@
 .conteudo-portifolio {
+    display: flex;
     align-content: center;
-    align-self: center;
-    justify-items: center;
+    justify-content: center;
     flex-flow: row wrap;
     text-align: center;
-
     color: var(--primary-font-color);
     background-color: var(--dark-primary);
     border: 2px solid var(--dark-primary);
@@ -67,7 +66,7 @@
     justify-content: center;
 }
 
-#redes-sociais img{
+#redes-sociais img {
     display: inline-flex;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -79,13 +78,12 @@
 
 #redes-sociais img:hover {
     display: inline-flex;
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
     margin-top: 5px;
     margin-right: 20px;
-
     border-radius: 20%;
-    border: 5px solid var(--secondary-color);
+    border: 5px solid rgb(212, 211, 211);
     transition: border 0.2s;
 }
 
