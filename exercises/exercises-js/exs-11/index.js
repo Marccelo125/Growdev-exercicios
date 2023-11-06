@@ -220,5 +220,5 @@ switch (selecionarExercicio) {
     exercise04();
     break;
   default:
-    document.write(`Digite um número até de 1 até 3`);
+    document.write(`Digite um número até de 1 até 4`);
 }
