@@ -1,20 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif&display=swap");
 
 :root {
     /* Cores principais do site */
-    --primary-color: #BB86FC;
-    --primary-variant: #3700B3;
-    --secondary-color: #05DAC5;
+    --primary-color: #bb86fc;
+    --primary-variant: #3700b3;
+    --secondary-color: #05dac5;
     --tertiary-color: #7d49f7;
-    
+
     /* Cores por trás do texto */
     --background-color: #161616;
     --surface-color: #121212;
-    --dark-primary: #1F1B24;
+    --dark-primary: #1f1b24;
     --dark-secondary: #332940;
-    --error-color: #CF6679;
-    
+    --error-color: #cf6679;
+
     /* Cores do texto */
     --primary-font-color: white;
     --secondary-font-color: rgb(240, 240, 240);
@@ -24,7 +24,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 main {
@@ -87,11 +87,13 @@ body::-webkit-scrollbar-thumb {
     background-color: var(--tertiary-color);
     border: 2px solid var(--tertiary-color);
     border-radius: 10px;
-    transition: background-color 0s, border 0.1s;
+    transition:
+        background-color 0s,
+        border 0.1s;
 }
 
 .menu-navegacao a {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
     font-size: 120%;
     color: var(--primary-font-color);
     text-decoration: none;
@@ -113,7 +115,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .texto-estatico {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 350%;
     text-align: center;
 }
@@ -139,7 +141,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .wrapper .texto-dinamico li::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     width: 100%;
@@ -150,7 +152,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 @keyframes typing {
-    40%, 60% {
+    40%,
+    60% {
         left: 105%;
     }
     100% {
@@ -161,30 +164,29 @@ body::-webkit-scrollbar-thumb {
 .wrapper .texto-dinamico li:nth-of-type(3)::after {
     animation-name: typing-short-designer;
     animation-timing-function: steps(15);
-
-} 
+}
 .wrapper .texto-dinamico li:nth-of-type(4)::after {
     animation-name: typing-short-growdever;
     animation-timing-function: steps(15);
 }
 
 @keyframes typing-short-growdever {
-    40%, 60% {
+    40%,
+    60% {
         left: 72%;
     }
     100% {
         left: 0;
-        
     }
 }
 
 @keyframes typing-short-designer {
-    40%, 60% {
+    40%,
+    60% {
         left: 60%;
     }
     100% {
         left: 0;
-        
     }
 }
 
@@ -198,7 +200,7 @@ body::-webkit-scrollbar-thumb {
 
     justify-content: center;
     font-size: 200%;
-    font-family: 'Merriweather Sans';
+    font-family: "Merriweather Sans";
     text-align: center;
 }
 
@@ -211,10 +213,10 @@ body::-webkit-scrollbar-thumb {
     font-size: 60%;
     text-align: justify;
     color: var(--secondary-font-color);
-    
+
     margin: 0 15% 0 15%;
     padding: 20px;
-    
+
     border: 2px solid var(--dark-secondary);
     border-radius: 10px;
 
@@ -236,7 +238,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 5px;
     margin: 1% 15% 0 15%;
     text-decoration: none;
-    transition: background-color 0.25s, color 0.25s, border 0.25s;
+    transition:
+        background-color 0.25s,
+        color 0.25s,
+        border 0.25s;
 }
 
 .botao-saiba-mais:hover {
@@ -260,7 +265,6 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
 }
 
-
 footer {
     color: var(--primary-font-color);
     text-align: center;
@@ -276,7 +280,7 @@ footer a {
 }
 
 footer a:nth-child(1) {
-    margin-left: 1px;   
+    margin-left: 1px;
 }
 
 footer a:hover {
