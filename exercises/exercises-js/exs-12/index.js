@@ -78,7 +78,7 @@ function exercise05() {
 
 let selecionarExercicio = Number(
   prompt(
-    "Digite o Exercício que deseja testar:\n1. Filmes (Array&Objeto)\n2. Alunos (Array&Objeto)\n3. Cadastro de pessoas\n4. Cadastro de Livros\n0. Sair"
+    "Digite o Exercício que deseja testar:\n1. Percorrer Vetor de 15\n2. Percorrer Vetor e somar\n3. Números perfeitos\n4. Verificar na Lista\n5. Revertendo Ordem\n0. Sair"
   )
 );
 
@@ -97,6 +97,9 @@ switch (selecionarExercicio) {
   case 4:
     exercise04();
     break;
+  case 5:
+    exercise05();
+    break;
   default:
-    document.write(`Digite um número até de 1 até 4`);
+    document.write(`Digite um número até de 1 até 5`);
 }

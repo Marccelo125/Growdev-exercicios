@@ -93,7 +93,6 @@ function exercise03() {
 // Nome: Alessandro, Idade: 28, Salário: 2700
 // Nome: Alessandro, Idade: 28, Salário: 3000
 
-exercise04();
 function exercise04() {
   let continuar = true;
 
@@ -166,4 +165,30 @@ function exercise04() {
   for (const usuario of salarioAlto) {
     document.write(`Nome: ${usuario.nome}, Idade: ${usuario.idade}<br />`);
   }
+}
+
+let selecionarExercicio = Number(
+  prompt(
+    "Digite o Exercício que deseja testar:\n1. Preço/Nome do produto\n2. Descrição Notebook\n3. Média dos Alunos\n4. Salarios Altos/Baixos e Desempregados\n0. Sair"
+  )
+);
+
+switch (selecionarExercicio) {
+  case 0:
+    break;
+  case 1:
+    exercise01();
+    break;
+  case 2:
+    exercise02();
+    break;
+  case 3:
+    exercise03();
+    break;
+  case 4:
+    exercise04();
+    break;
+
+  default:
+    document.write(`Digite um número até de 1 até 4`);
 }
