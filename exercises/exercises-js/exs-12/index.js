@@ -67,7 +67,7 @@ function exercise04() {
 // e que exiba a lista desses nomes na tela. Após exibir essa lista, o
 // programa deve mostrar também os nomes na ordem inversa em
 // que o usuário os digitou.
-exercise05()
+
 function exercise05() {
   let nomes = [];
   for (let i = 1; i <= 5; i++){
