@@ -75,3 +75,28 @@ function exercise05() {
   }
   console.log(nomes.reverse())
 }
+
+let selecionarExercicio = Number(
+  prompt(
+    "Digite o Exercício que deseja testar:\n1. Filmes (Array&Objeto)\n2. Alunos (Array&Objeto)\n3. Cadastro de pessoas\n4. Cadastro de Livros\n0. Sair"
+  )
+);
+
+switch (selecionarExercicio) {
+  case 0:
+    break;
+  case 1:
+    exercise01();
+    break;
+  case 2:
+    exercise02();
+    break;
+  case 3:
+    exercise03();
+    break;
+  case 4:
+    exercise04();
+    break;
+  default:
+    document.write(`Digite um número até de 1 até 4`);
+}
