@@ -69,6 +69,7 @@ function exercise06() {
 // Exercício 7
 function exercise07() {
   let aplicacao = "Growdev"
+  mostrarMensagem()
   function mostrarMensagem() {
     console.log(`Acesso à aplicação ${aplicacao}`);
     alert(`Acesso à aplicação ${aplicacao}`)
