@@ -16,7 +16,6 @@ function exercise02() {
   console.log(rainbow);
 }
 
-exercise03()
 function exercise03() {
   let continuar = true;
 
