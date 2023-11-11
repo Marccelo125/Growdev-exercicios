@@ -91,3 +91,21 @@ function exercise03() {
     document.write(`Nome: ${usuario.nome}, Idade: ${usuario.idade}, Salário: ${usuario.salario}<br />`);
   }
 }
+
+let selecionarExercicio = Number(prompt("Digite o Exercício que deseja testar:\n1. Procurar index do salario\n2. Lista Arco Íris\n3. Registro de Emprego\n0. Sair"))
+
+switch (selecionarExercicio) {
+    case 0:
+        break
+    case 1:
+        exercise01()
+        break
+    case 2:
+        exercise02()
+        break
+    case 3:
+        exercise03()
+        break
+    default:
+        document.write(`Digite um número até de 1 até 3`)
+}
