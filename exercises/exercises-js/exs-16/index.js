@@ -230,12 +230,12 @@ while (continuar) {
   pergunta += `No momento, o sistema tem ${dadosVeiculos.length} carros cadastrados\n`
   pergunta += "------------------------------------------------------------\n";
   pergunta += "Escolha uma das opções para interagir com o sistema:\n";
-  pergunta += "1. Cadastrar Veículo\n";
-  pergunta += "2. Listar Veículos\n";
-  pergunta += "3. Procurar Veículo\n";
+  pergunta += "1. Cadastrar veículo\n";
+  pergunta += "2. Listar todos os veículos\n";
+  pergunta += "3. Filtrar veículos por marca\n";
   pergunta += "4. Atualizar Veículo\n";
-  pergunta += "5. Deletar Veículo\n";
-  pergunta += "6. Sair";
+  pergunta += "5. Remover Veículo\n";
+  pergunta += "6. Sair do sistema";
 
   // Guardar resposta
   let resposta = Number(prompt(pergunta));
