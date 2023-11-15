@@ -59,7 +59,7 @@ function cadastrarVeiculo() {
     const cor = prompt("Qual a COR do seu veículo?");
     const preco = parseFloat(prompt("Qual o PREÇO do seu veículo?"));
 
-    if (modelo.length <= 1 || marca.length <= 2 || cor.length <= 2)
+    if (modelo.length <= 1 || marca.length <= 1 || cor.length <= 2)
       return console.error(
         "Não foi possivel concluír seu cadastro. Modelo, marca ou cor inválidos."
       );
@@ -82,6 +82,7 @@ function cadastrarVeiculo() {
     // Mostrar para o user
     // # Fazer lista organizada (prj1 - 3ktalentos)
     console.log(`Veículo cadastrado com SUCESSO:`);
+    console.log(`ID: ${novoVeiculo.id}`);
     console.log(`Modelo: ${novoVeiculo.modelo}`);
     console.log(`Marca: ${novoVeiculo.marca}`);
     console.log(`Ano: ${novoVeiculo.ano}`);
