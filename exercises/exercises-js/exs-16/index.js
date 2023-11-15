@@ -216,10 +216,20 @@ function sair() {
 
 // Loop para perguntar ao usuário
 while (continuar) {
+
+
+  // Bem-vindo ao sistema de CRUD de veículos:
+
+  // No momento, o sistema tem X carros cadastrados
+  
+  // Escolha uma das opções para interagir com o sistema:
+
+
   // Formatar pergunta
-  let pergunta = "CADASTRO DE VEÍCULOS\n";
-  pergunta += "---------------------------\n";
-  pergunta += "Escolha uma opção:\n";
+  let pergunta = "Bem-vindo ao sistema de CRUD de veículos:\n";
+  pergunta += `No momento, o sistema tem ${dadosVeiculos.length} carros cadastrados\n`
+  pergunta += "------------------------------------------------------------\n";
+  pergunta += "Escolha uma das opções para interagir com o sistema:\n";
   pergunta += "1. Cadastrar Veículo\n";
   pergunta += "2. Listar Veículos\n";
   pergunta += "3. Procurar Veículo\n";
