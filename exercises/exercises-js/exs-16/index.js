@@ -1,46 +1,46 @@
 // CRUD Cadastro de veículos
 
 //Definições básicas
-let continuar = true;
+let continuar = false;
 const dadosVeiculos = [
   {
     id: 1699994316651,
     modelo: "Onix",
-    marca: "Chevrolet",
+    marca: "chevrolet",
     ano: 2021,
-    cor: "Preto",
+    cor: "preto",
     preco: 80000,
   },
   {
     id: Date.now() + 1,
     modelo: "Celta",
-    marca: "BMW",
+    marca: "bmw",
     ano: 2010,
-    cor: "Roxo",
+    cor: "roxo",
     preco: 20000,
   },
   {
     id: Date.now() + 1,
     modelo: "Celta",
-    marca: "BMW",
+    marca: "bmw",
     ano: 2012,
-    cor: "Roxo",
+    cor: "roxo",
     preco: 500000,
   },
   {
     id: Date.now() + 1,
     modelo: "Celta",
-    marca: "BMW",
+    marca: "bmw",
     ano: 2015,
-    cor: "Roxo",
+    cor: "verde",
     preco: 35000,
   },
   {
     id: Date.now() + 2,
-    modelo: "Fusca",
-    marca: "Volkswagen",
+    modelo: "Carro",
+    marca: "fiat",
     ano: 1986,
-    cor: "Azul",
+    cor: "azul",
     preco: 18000,
   },
 ];
@@ -52,7 +52,7 @@ function cadastrarVeiculo() {
 
   while (seguir) {
     const modelo = prompt("Qual o MODELO do seu veículo?\n0. Voltar");
-    if (modelo == 0) return
+    if (modelo == 0) return;
 
     const marca = prompt("Qual a MARCA do seu veículo?").toLowerCase();
     const ano = Number(prompt("Qual o ANO do seu veículo?"));
@@ -107,28 +107,32 @@ function listarVeiculos() {
     return a.preco - b.preco;
   });
 
-  const arrayComplementado = `${"ID".padEnd(
+  const arrayComplementado = `
+  ${"ID".padEnd(
     numeroMaior
-  )} | Modelo       | Marca        | Ano  | Cor    | Preço       `;
-  console.log(arrayComplementado);
-  console.log("-".padEnd(arrayComplementado.length, "-"));
+  )} | Modelo      | Marca       | Ano        | Cor        | Preço\n`;
+  let resultado =
+    arrayComplementado + "-".padEnd(arrayComplementado.length, "-") + "\n";
 
   for (let carro of dadosVeiculos) {
-    console.log(
-      `${String(carro.id).padEnd(numeroMaior)} | ${carro.modelo.padEnd(
-        12
-      )} | ${String(carro.marca).padEnd(12)} | ${String(carro.ano).padEnd(
-        4
-      )} | ${String(carro.cor).padEnd(6)} | R$ ${String(carro.preco).padEnd(
-        12
-      )}`
-    );
+    resultado += `${String(carro.id).padEnd(
+      numeroMaior
+    )} | ${carro.modelo.padEnd(12)} | ${String(carro.marca).padEnd(
+      12
+    )} | ${String(carro.ano).padEnd(4)} | ${String(carro.cor).padEnd(
+      6
+    )} | R$ ${String(carro.preco).padEnd(12)}\n`;
   }
+
+  // Exibir em um alert
+  alert(resultado);
 }
 
 // Filtrar por Marca
 function filtrarMarca() {
-  const marcaUsuario = prompt("Qual MARCA deseja consultar?\n0. Voltar").toLowerCase();
+  const marcaUsuario = prompt(
+    "Qual MARCA deseja consultar?\n0. Voltar"
+  ).toLowerCase();
   if (marcaUsuario === 0) return;
 
   let acharMarca = dadosVeiculos.filter(
@@ -141,10 +145,17 @@ function filtrarMarca() {
   });
 
   if (acharMarca.length > 0) {
-    console.log("Veículos encontrados:");
-
+    alert("Veículos encontrados:");
+    let numeroMaior = 13;
+    for (let carro of dadosVeiculos) {
+      if (String(carro.id).length > numeroMaior) {
+        numeroMaior = String(carro.id).length;
+      }
+    }
     for (let carro of acharMarca) {
-      console.log(carro);
+      alert(
+        `ID: ${carro.id} | Modelo: ${carro.modelo} | Marca: ${carro.marca} | Ano: ${carro.ano} | Cor: ${carro.cor} | R$ ${carro.preco}\n`
+      );
     }
   } else {
     console.log("Nenhum veículo encontrado para a marca informada.");
@@ -156,34 +167,36 @@ function atualizarVeiculo() {
   const idVeiculo = Number(prompt("Digite o ID do seu veículo:\n0. Voltar"));
   if (idVeiculo === 0) return;
 
-  let indiceAchado = false;
-  const indiceVeiculo = dadosVeiculos.findIndex((carro) => {
+  let indiceVeiculo = -1;
+  dadosVeiculos.some((carro, index) => {
     if (carro.id === idVeiculo) {
-      indiceAchado = true;
+      indiceVeiculo = index;
+      return true;
     }
-    return;
+    return false;
   });
 
-  if (indiceAchado) {
+  if (indiceVeiculo !== -1) {
     const novaCor = prompt("Digite a nova COR do seu veículo:");
     const novoPreco = parseFloat(prompt("Digite o novo PREÇO do seu veículo:"));
 
-    // # Este if diz que se o novaCor der NEGATIVO para é um numero (!isNaN) entra no IF
-    if (!isNaN(novaCor) || isNaN(novoPreco))
-      return console.error("Valor inválido.");
+    // Correção: Corrigindo a condição de validação de entrada.
+    if (isNaN(novaCor) && !isNaN(novoPreco)) {
+      const confirmarAlteracao = confirm(
+        `Nova COR: ${novaCor} | Novo PREÇO: ${novoPreco}\nConfirmar novas informações?`
+      );
 
-    const confirmarAlteracao = confirm(
-      `Nova COR: ${novaCor} | Novo PREÇO: ${novoPreco}\nConfirmar novas informações?`
-    );
-
-    if (confirmarAlteracao) {
-      console.log("Veiculo atualizado com SUCESSO!");
-      dadosVeiculos[indiceVeiculo].cor = novaCor;
-      dadosVeiculos[indiceVeiculo].preco = novoPreco;
-
-      console.log(listarVeiculos());
-    } else return console.log("Atualização cancelada pelo usuário.");
-  } else return console.log("Veículo, não encontrado.");
+      if (confirmarAlteracao) {
+        alert("Veículo atualizado com SUCESSO!");
+        // Certifica-se de que o índice do veículo é válido antes de atualizar as propriedades.
+        if (dadosVeiculos[indiceVeiculo]) {
+          dadosVeiculos[indiceVeiculo].cor = novaCor;
+          dadosVeiculos[indiceVeiculo].preco = novoPreco;
+          listarVeiculos();
+        } else console.error("Erro: Índice de veículo inválido.");
+      } else alert("Atualização cancelada pelo usuário.");
+    } else console.error("Valor inválido.");
+  } else console.log("Veículo não encontrado.");
 }
 
 // Delete
@@ -202,11 +215,105 @@ function deletarVeiculo() {
 
     if (confirmarDeletar) {
       dadosVeiculos.splice(indiceVeiculo, 1);
-      return console.log("Veículo deletado com SUCESSO.");
+      return alert("Veículo deletado com SUCESSO.");
     }
-    if (!confirmarDeletar)
-      return console.log("Operação cancelada pelo usuário.");
+    if (!confirmarDeletar) return alert("Operação cancelada pelo usuário.");
   } else return console.error("Veículo, não encontrado.");
+}
+
+// Filtrar Carros por Faixa de Preço: Crie uma função que recebe dois argumentos, preço mínimo e preço máximo, e retorna todos os carros cujo valor está dentro desta faixa.
+function declararMinEMax() {
+  const precoMax = Number(prompt("Digite o preço MÁXIMO:"));
+  const precoMin = Number(prompt("Digite o preço MÍNIMO:"));
+
+  if (!isNaN(precoMax) && !isNaN(precoMin)) filtrarPorPreco(precoMin, precoMax);
+  else console.log("Valores inválidos");
+}
+
+function filtrarPorPreco(precoMin, precoMax) {
+  const precoFiltrado = dadosVeiculos.filter(
+    (carro) => carro.preco >= precoMin && carro.preco <= precoMax
+  );
+  console.log(precoFiltrado);
+}
+
+function veiculoMaisCaro() {
+  const maisCaro = dadosVeiculos.reduce((acumulado, atual) => {
+    return acumulado.preco > atual.preco ? acumulado : atual;
+  });
+  console.log(maisCaro);
+}
+
+// Agrupar Carros por Marca: Escreva uma função que agrupe carros por marca e retorne um objeto cujas chaves são os nomes das marcas e os valores são arrays de carros dessa marca.
+function filtrarTodasMarcas() {
+  const fiat = [];
+  const bmw = [];
+  const chevrolet = [];
+
+  for (carro of dadosVeiculos) {
+    if (carro.marca === "fiat") fiat.push(carro);
+    if (carro.marca === "bmw") bmw.push(carro);
+    if (carro.marca === "chevrolet") chevrolet.push(carro);
+  }
+  console.log(fiat);
+  console.log(bmw);
+  console.log(chevrolet);
+}
+
+// Calcular a Média de Preço dos Carros: Implemente uma função que calcule e retorne a média de preço de todos os carros da lista.
+function mediaCarros() {
+  let valorTotal = 0;
+  for (carro of dadosVeiculos) {
+    valorTotal += carro.preco;
+  }
+  let media = valorTotal / dadosVeiculos.length;
+  console.log(media);
+}
+
+// Listar Carros por Ordem Alfabética: Desenvolva uma função que retorne os carros ordenados alfabeticamente por modelo
+function listarAfababeticamente() {
+  dadosVeiculos.sort((modelo1, modelo2) => {
+    let a = modelo1.modelo.toUpperCase(),
+      b = modelo2.modelo.toUpperCase();
+    return a == b ? 0 : a > b ? 1 : -1;
+  });
+  console.log(dadosVeiculos);
+}
+
+// Contar Carros por Cor: Elabore uma função que conte quantos carros de cada cor existem na lista e retorne um objeto com esta contagem.
+function filtrarPorCor() {
+  let roxo = 0
+  let preto = 0
+  let verde = 0
+  let azul = 0
+
+  for (carro of dadosVeiculos) {
+    if (carro.cor === 'roxo') roxo++
+    if (carro.cor === 'verde') verde++
+    if (carro.cor === 'preto') preto++
+    if (carro.cor === 'azul') azul++
+  }
+
+  console.log(`Quantidade de carros ROXOS: ${roxo}`);
+  console.log(`Quantidade de carros PRETOS: ${preto}`);
+  console.log(`Quantidade de carros VERDES: ${verde}`);
+  console.log(`Quantidade de carros AZUIS: ${azul}`);
+}
+
+// Buscar Carros por Características Específicas: Implemente uma função que permite buscar carros por múltiplos critérios, como cor, marca, ano, etc. Como se fosse uma barra de pesquisa.
+function buscarCaracteristica() {
+  const caracteristica = prompt('Qual a característica do carro?').toLowerCase()
+  const procurarCarac = dadosVeiculos.filter((procurar) => {
+    return (
+      procurar.modelo === caracteristica ||
+      procurar.marca === caracteristica ||
+      procurar.ano === Number(caracteristica) ||
+      procurar.cor === caracteristica ||
+      procurar.preco == Number(caracteristica)
+    );
+  });
+  if (procurarCarac.length <= 0) console.log("Nada foi encontrado");
+  else console.log(procurarCarac);
 }
 
 // Sair
@@ -217,18 +324,15 @@ function sair() {
 
 // Loop para perguntar ao usuário
 while (continuar) {
-
-
   // Bem-vindo ao sistema de CRUD de veículos:
 
   // No momento, o sistema tem X carros cadastrados
-  
-  // Escolha uma das opções para interagir com o sistema:
 
+  // Escolha uma das opções para interagir com o sistema:
 
   // Formatar pergunta
   let pergunta = "Bem-vindo ao sistema de CRUD de veículos:\n";
-  pergunta += `No momento, o sistema tem ${dadosVeiculos.length} carros cadastrados\n`
+  pergunta += `No momento, o sistema tem ${dadosVeiculos.length} carros cadastrados\n`;
   pergunta += "------------------------------------------------------------\n";
   pergunta += "Escolha uma das opções para interagir com o sistema:\n";
   pergunta += "1. Cadastrar veículo\n";
