@@ -1,7 +1,7 @@
 // CRUD Cadastro de veículos
 
 //Definições básicas
-let continuar = false;
+let continuar = true;
 const dadosVeiculos = [
   {
     id: 1699994316651,
