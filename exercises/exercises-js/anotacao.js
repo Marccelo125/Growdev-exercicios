@@ -156,3 +156,28 @@ console.log(sum);
 // Caso deseje, pode definir um valor inicial para o acumulador (neste caso 1), a operação segue a mesma forma da anterior
 const sum2 = numberListNew.reduce((acumulator, currentValue) => acumulator + currentValue, 1)
 console.log(sum2);
+
+// REVISÃO
+
+// Lista de frutas
+const fruits = ['Maça', 'Banana', 'Laranja', 'Morango', 'Pêra']
+
+// SLICE - Retorna o intervalo do indíce do array, contando á partir do inicio (não imprime o ultimo)
+const selected = fruits.slice(1, 4)
+
+console.log(selected);
+// > ['Banana', 'Laranja', 'Morango] 
+
+// SPREAD - Espalha o array para um novo (sem alterar o principal, cria uma copia independente)
+const newFruits = [...fruits]
+
+// For OF para elemento, For IN para indice
+// FOR OF
+for (const fruta of fruits) {
+    console.log(fruta.nome);
+}
+
+// FOR IN
+for (let index in fruits) {
+    console.log(fruits[index]);
+}
