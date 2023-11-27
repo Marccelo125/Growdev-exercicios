@@ -12,6 +12,10 @@
 [Hub de exercícios](https://marccelo125.github.io/Growdev-exercicios/)
 > este link te levará para o meu hub onde alocarei todos os exercícios realizados durante o curso.
 
+![hub-exercicios-01](https://github.com/Marccelo125/Growdev-exercicios/assets/127633664/86694cb4-0501-4928-8e35-cf119d2fc51f)
+![hub-exercicios-02](https://github.com/Marccelo125/Growdev-exercicios/assets/127633664/13a1ed29-5bf4-4f86-9e24-b6952bcfffaf)
+![hub-exercicios-03](https://github.com/Marccelo125/Growdev-exercicios/assets/127633664/d9975b04-1881-4dbb-a018-5c8049c46757)
+
 # Módulos estudados
 | Módulo               | Horas           | Conteúdo                          |
 | -------------------- | --------------- | --------------------------------- |
@@ -27,7 +31,7 @@
 <summary>Lista de Conteúdos </summary>
 
 ### Conteúdos que serão estudados
-##### Última Atualização: 27/10/23
+##### Última Atualização: 27/11/23
 - HTML5
 - CSS
 - JavaScript
