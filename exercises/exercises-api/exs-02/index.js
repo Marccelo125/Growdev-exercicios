@@ -62,27 +62,27 @@ function apiPlanetas() {
       console.log(moonsDensity);
 
       //10
-      // console.log("10. Ordem de descobrimento:");
-      // const ordemDescobrimento = allPlanets.filter(corpse => corpse.discoveryDate !== '');
-      // const sortDescobrimento = ordemDescobrimento.sort((a, b) => new Date(a.discoveryDate.split("/").reverse().join("-")) - new Date(b.discoveryDate.split("/").reverse()));
-      // sortDescobrimento.forEach(astro => console.log(`${astro.englishName}: ${astro.discoveryDate}`));
+      console.log("10. Ordem de descobrimento:");
+      const ordemDescobrimento = allPlanets.filter(corpse => corpse.discoveryDate !== '');
+      const sortDescobrimento = ordemDescobrimento.sort((a, b) => new Date(a.discoveryDate.split("/").reverse().join("-")) - new Date(b.discoveryDate.split("/").reverse()));
+      sortDescobrimento.forEach(astro => console.log(`${astro.englishName}: ${astro.discoveryDate}`));
 
       //11
-      // console.log(`11. Encontrando Astro:`);
-      // procurarAstro();
-      // function procurarAstro() {
-      //   const name = prompt("Digite o nome do Planeta: ");
-      //   const findPlanet = allPlanets.find(
-      //     (corpse) => corpse.englishName === name
-      //   );
-      //   if (findPlanet) {
-      //     console.log(`Aphelion: ${findPlanet.aphelion}`);
-      //     console.log(`Perihelio: ${findPlanet.perihelion}`);
-      //     console.log(`Massa: ${findPlanet.mass.massValue}`);
-      //     console.log(`Gravidade: ${findPlanet.gravity}`);
-      //     console.log(`Densidade ${findPlanet.density}`);
-      //   }
-      // }
+      console.log(`11. Encontrando Astro:`);
+      procurarAstro();
+      function procurarAstro() {
+        const name = prompt("Digite o nome do Planeta: ");
+        const findPlanet = allPlanets.find(
+          (corpse) => corpse.englishName === name
+        );
+        if (findPlanet) {
+          console.log(`Aphelion: ${findPlanet.aphelion}`);
+          console.log(`Perihelio: ${findPlanet.perihelion}`);
+          console.log(`Massa: ${findPlanet.mass.massValue}`);
+          console.log(`Gravidade: ${findPlanet.gravity}`);
+          console.log(`Densidade ${findPlanet.density}`);
+        }
+      }
 
       //12
       console.log(`12. Filtro de Temperatura:`);
