@@ -1,0 +1,36 @@
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+button:active {
+    background-color: #1f618d;
+    color: white;
+}
+
+div {
+    display: block;
+    text-align: center;
+}
+
+#incrementButton {
+    background-color: green;
+}
+
+#resetButton {
+    background-color: black;
+}
