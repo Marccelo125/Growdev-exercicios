@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+
+h1 {
+    margin: 20px 0;
+}
+
+.instaGrow {
+    font-size: 30px;
+    text-align: left;
+    padding: 5px;
+    margin: 0px;
+}
+
+img {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+}
+
+#presenca-container {
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    display: inline-block;
+    text-align: left;
+}
+
+#contador {
+    display: inline-flex;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+#contador::after {
+    color: blue;
+}
+
+#button-register {
+    color: rgb(19, 19, 19);
+    border: 2px solid rgb(255, 189, 189);
+    background-color: rgb(253, 239, 241);
+    border-radius: 6px;
+    display: inline-flex;
+    font-size: 20px;        
+    transition: all 0.2s;
+}
+
+#button-register:hover {
+    color: rgb(202, 124, 124);
+    border: 2px solid rgb(248, 106, 106);
+    background-color: rgb(250, 215, 220);
+}
+
+.ten-likes {
+    color: rgb(255, 255, 255);
+    background: rgb(228, 43, 11);
+    padding: 5px;
+    transition: all 0.5s;
+} 
