@@ -5,27 +5,34 @@ async function fetchTasks() {
     const response = await api.get("/notes");
     const tasks = response.data;
 
-    const messagesContainer = document.querySelector("main");
-    const messagesList = document.createElement("div");
-    messagesList.classList.add("messages-list");
+    const messagesContainer = document.querySelector(".messages-list");
+
+    if (tasks.length > 0) {
+      const card = document.createElement("div");
+      card.classList.add("card");
+      card.style.backgroundColor = 'red'
+
+      card.innerHTML = `
+      <h2 class="card-title" style="color: white">AVISO TESTE</h2>
+      <p class="card-description" style="color: white">
+      Nenhum recado cadastrado
+      </p>
+      `;
+      messagesContainer.appendChild(card)
+    }
 
     tasks.forEach((task) => {
-      const card = document.createElement("div");
-      const cardTitle = document.createElement("h2");
-      const cardDescription = document.createElement("p");
+        const card = document.createElement("div");
+        card.classList.add("card");
 
-      card.classList.add("card");
-      cardTitle.classList.add("card-title");
-      cardDescription.classList.add("card-description");
-
-      cardTitle.innerText = `${task.title}`;
-      cardDescription.innerText = `${task.description}`;
-
-      card.appendChild(cardTitle);
-      card.appendChild(cardDescription);
-      messagesList.appendChild(card);
+        card.innerHTML = `
+        <h2 class="card-title">${task.title}</h2>
+        <p class="card-description">
+        ${task.description}
+        </p>
+        `;
+        messagesContainer.appendChild(card);
     });
-    messagesContainer.appendChild(messagesList);
     console.log(tasks);
   } catch (error) {
     console.error(`Erro ao buscar mensagens: ${error}`);
