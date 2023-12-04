@@ -2,7 +2,7 @@ async function readExercises() {
     const response = await fetch ('./json/exercises-list.json')
     const dataExercises = await response.json()
 
-    for (exercise of dataExercises) {
+    dataExercises.forEach(exercise => {
         const containerExercises = document.querySelector('.conteudo-principal')
         const summaryTittle = document.createElement('summary')
         const details = document.createElement('details')
@@ -27,7 +27,7 @@ async function readExercises() {
         containerExercises.appendChild(details)
         details.appendChild(summaryTittle)
         details.appendChild(articleLink)
-    }
+    });
 }
 readExercises()
 
