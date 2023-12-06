@@ -1,6 +1,6 @@
 const taskContainer = document.querySelector("main");
 
-async function fetchTasks() {
+async function fetchMessages() {
   try {
     const response = await api.get("/notes");
     const tasks = response.data;
@@ -38,4 +38,54 @@ async function fetchTasks() {
     console.error(`Erro ao buscar mensagens: ${error}`);
   }
 }
-fetchTasks();
+
+async function createNewMessage() {
+  const newMessage = {
+    title: 'Marcelo - TESTE',
+    description: '?',
+    user_id: 18
+  }
+  try {
+    const response = await api.post('/notes', newMessage) // NewMessage é o objeto que criamos e vamos passar pra API
+    if (response.status === 201) { // Se voltar 201 de status (desta api significa sucesso)
+      alert("Cadastrado com sucesso!")
+    }
+  } catch (error) {
+    console.error(`Erro ao cadastrar recado ${error}`);
+  }
+}
+
+async function updateMessage() {
+  const idMessage = 111
+
+  const newMessage = {
+    title: 'Marselo tem que ir ao mercado ',
+    description: '13h',
+  }
+  try {
+    const response = await api.put(`/notes/${idMessage}`, newMessage) // End point é o ID da mensagem que desejo editar
+    if (response.status === 201) { // Se voltar 201 de status (desta api significa sucesso)
+      alert("Atualizado com sucesso!")
+    }
+  } catch (error) {
+    console.error(`Erro ao atualizar recado ${error}`);
+  }
+}
+
+async function deleteMessage() {
+  const idMessage = 173
+
+  try {
+    const response = await api.delete(`/notes/${idMessage}`) // End point é o ID da mensagem que desejo deletar
+    if (response.status === 201) { // Se voltar 201 de status (desta api significa sucesso)
+      alert("Deletado com sucesso!")
+    }
+  } catch (error) {
+    console.error(`Erro ao deletar recado ${error}`);
+  }
+}
+
+// createNewMessage()
+// updateMessage()
+// deleteMessage()
+fetchMessages();
