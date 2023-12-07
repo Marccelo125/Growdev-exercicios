@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercícios DOM Events / Javascript</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <form id="form">
+      <fieldset class="dados-pessoais">
+        <legend>Dados Pessoais</legend>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required />
+        <br />
+        <label for="endereco">Endereço:</label>
+        <input type="text" name="endereco" id="endereco" required />
+        <br />
+        <label for="cidade">Cidade:</label>
+        <input type="text" name="cidade" id="cidade" required />
+        <br />
+        <label for="estado">Estado:</label>
+        <select name="estado" id="estado">
+          <option value="">Selecione</option>
+          <option value="AC">Acre</option>
+          <option value="AL">Alagoas</option>
+          <option value="AM">Amazonas</option>
+        </select>
+      </fieldset>
+      <fieldset class="dados-profissionais">
+        <legend>Dados Profissionais</legend>
+        <h4>Natureza do Cargo:</h4>
+        <div class="cargos">
+          <label for="gerencia">
+            <input type="radio" name="cargo" id="gerencia" />
+            Gerencia
+          </label>
+          <label for="financeiro">
+            <input type="radio" name="cargo" id="financeiro" />
+            Financeiro
+          </label>
+          <label for="recepcao">
+            <input type="radio" name="cargo" id="recepcao" />
+            Recepção
+          </label>
+          <label for="administrativo">
+            <input type="radio" name="cargo" id="administrativo" />
+            Administrativo
+          </label>
+          <label for="juridico">
+            <input type="radio" name="cargo" id="juridico" />
+            Jurídico
+          </label>
+        </div>
+        <br /><br />
+        <h4>Área de Interesse:</h4>
+        <div class="areas-interesse">
+          <label for="area-interesse">
+            <input
+              type="checkbox"
+              name="area-interesse[]"
+              id="computacao"
+              value="computacao"
+            />
+            Computação
+          </label>
+          <label for="area-interesse">
+            <input
+              type="checkbox"
+              name="area-interesse[]"
+              id="biologia"
+              value="biologia"
+            />
+            Biologia
+          </label>
+          <label for="area-interesse">
+            <input
+              type="checkbox"
+              name="area-interesse[]"
+              id="meio-ambiente"
+              value="meio-ambiente"
+            />
+            Meio Ambiente
+          </label>
+          <label for="area-interesse">
+            <input
+              type="checkbox"
+              name="area-interesse[]"
+              id="engenharia"
+              value="engenharia"
+            />
+            Engenharia </label
+          ><label for="area-interesse">
+            <input
+              type="checkbox"
+              name="area-interesse[]"
+              id="historia"
+              value="historia"
+            />
+            Historia
+          </label>
+        </div>
+        <br />
+        <label for="mini-curriculo">Mini-currículo:</label>
+        <textarea name="mini-curriculo" id="mini-curriculo"></textarea>
+      </fieldset>
+
+      <fieldset class="acoes">
+        <legend>Ações</legend>
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Limpar" />
+      </fieldset>
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>
