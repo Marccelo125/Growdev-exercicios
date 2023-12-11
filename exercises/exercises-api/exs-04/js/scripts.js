@@ -1,91 +1,58 @@
-const taskContainer = document.querySelector("main");
+const messagesContainer = document.querySelector('.messages-list')
 
 async function fetchMessages() {
   try {
-    const response = await api.get("/notes");
-    const tasks = response.data;
+    const response = await api.get('/notes')
+    const messages = response.data
 
-    const messagesContainer = document.querySelector(".messages-list");
+    console.log(messages)
 
-    if (tasks.length > 0) {
-      const card = document.createElement("div");
-      card.classList.add("card");
-      card.style.backgroundColor = 'red'
+    messagesContainer.innerHTML = ''
 
-      card.innerHTML = `
-      <h2 class="card-title" style="color: white">AVISO TESTE</h2>
-      <p class="card-description" style="color: white">
-      Nenhum recado cadastrado
-      </p>
-      `;
-      messagesContainer.appendChild(card)
-    }
+    messages.forEach(message => {
+      const messageCard = document.createElement('div')
+      messageCard.classList.add('card')
 
-    tasks.forEach((task) => {
-        const card = document.createElement("div");
-        card.classList.add("card");
+      messageCard.innerHTML = `
+        <h2 class="card-title">${message.title}</h2>
+        <p class="card-description">${message.description}</p>
+        <div class="card-icons">
+          <i class="fas fa-solid fa-trash" data-id=${message.id}></i>
+          <i class="fas fa-regular fa-edit" data-id=${message.id}></i>
+        </div>
+      `
 
-        card.innerHTML = `
-        <h2 class="card-title">${task.title}</h2>
-        <p class="card-description">
-        ${task.description}
-        </p>
-        `;
-        messagesContainer.appendChild(card);
+      messagesContainer.appendChild(messageCard)
+
+      const deleteIcon = messageCard.querySelector('.fa-trash')
+
+      deleteIcon.addEventListener('click', () => {
+        const messageId = deleteIcon.getAttribute('data-id')
+
+        deleteMessage(messageId)
+      })
+
+      const editIcon = messageCard.querySelector('.fa-edit')
+      editIcon.addEventListener('click', () => {
+        const messageId = editIcon.getAttribute('data-id')
+
+        navigateToEditPage(messageId)
+      })
     });
-    console.log(tasks);
-  } catch (error) {
-    console.error(`Erro ao buscar mensagens: ${error}`);
-  }
-}
 
-async function createNewMessage() {
-  const newMessage = {
-    title: 'Marcelo - TESTE',
-    description: '?',
-    user_id: 18
-  }
-  try {
-    const response = await api.post('/notes', newMessage) // NewMessage é o objeto que criamos e vamos passar pra API
-    if (response.status === 201) { // Se voltar 201 de status (desta api significa sucesso)
-      alert("Cadastrado com sucesso!")
+    if (messages.length === 0) {
+      const h3 = document.createElement('h3')
+      h3.textContent = 'Nenhum recado cadastrado.'
+      messagesContainer.appendChild(h3)
     }
   } catch (error) {
-    console.error(`Erro ao cadastrar recado ${error}`);
+    console.log('Erro ao buscar mensagens', error)
   }
 }
 
-async function updateMessage() {
-  const idMessage = 111
+fetchMessages()
 
-  const newMessage = {
-    title: 'Marselo tem que ir ao mercado ',
-    description: '13h',
-  }
-  try {
-    const response = await api.put(`/notes/${idMessage}`, newMessage) // End point é o ID da mensagem que desejo editar
-    if (response.status === 201) { // Se voltar 201 de status (desta api significa sucesso)
-      alert("Atualizado com sucesso!")
-    }
-  } catch (error) {
-    console.error(`Erro ao atualizar recado ${error}`);
-  }
+function navigateToEditPage(messageId) {
+  location.href = `editar-recado.html?id=${messageId}`
 }
 
-async function deleteMessage() {
-  const idMessage = 173
-
-  try {
-    const response = await api.delete(`/notes/${idMessage}`) // End point é o ID da mensagem que desejo deletar
-    if (response.status === 201) { // Se voltar 201 de status (desta api significa sucesso)
-      alert("Deletado com sucesso!")
-    }
-  } catch (error) {
-    console.error(`Erro ao deletar recado ${error}`);
-  }
-}
-
-// createNewMessage()
-// updateMessage()
-// deleteMessage()
-fetchMessages();

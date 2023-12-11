@@ -1,25 +1,13 @@
-const formNewMessage = document.getElementById("form-new-message");
-const idInput = document.getElementById("id");
-
-formNewMessage.addEventListener("submit", (event) => {
-  event.preventDefault(); // impede comportamento padrão submit
-
-  const idValue = idInput.value;
-  const newMessage = {
-    id: idValue
-  };
-
-  deleteMessage(newMessage);
-});
-
-async function deleteMessage(message) {
+async function deleteMessage(messageId) {
   try {
-    const response = await api.delete(`/notes/${message.id}`); // End point é o ID da mensagem que desejo editar
+    const response = await api.delete(`/notes/${messageId}`)
+
     if (response.status === 200) {
-      // Se voltar 201 de status (desta api significa sucesso)
-      alert("Deletado com sucesso!");
+      alert('Recado excluído com sucesso')
     }
+
+    location.reload()
   } catch (error) {
-    console.error(`Erro ao atualizar recado ${error}`);
+    console.log('Erro ao excluir recado', error)
   }
 }
