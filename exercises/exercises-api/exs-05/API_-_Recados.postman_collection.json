@@ -1,0 +1,301 @@
+{
+	"info": {
+		"_postman_id": "a13b920d-797d-4497-87bb-73a72d87d237",
+		"name": "API - Recados",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27831077",
+		"_collection_link": "https://galactic-crescent-278332.postman.co/workspace/Starter-API---Recados~c455839b-da04-4242-9fca-3aab53a97e4c/collection/27831077-a13b920d-797d-4497-87bb-73a72d87d237?action=share&creator=27831077&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Notes",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://65089a2a56db83a34d9c8c86.mockapi.io/api/v1/notes",
+							"protocol": "https",
+							"host": [
+								"65089a2a56db83a34d9c8c86",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://65089a2a56db83a34d9c8c86.mockapi.io/api/v1/notes/2",
+							"protocol": "https",
+							"host": [
+								"65089a2a56db83a34d9c8c86",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Fazer compras 3\",\n    \"description\" : \"3 preciso passar no mercado e fazer minhas compras\",\n    \"user_id\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://65089a2a56db83a34d9c8c86.mockapi.io/api/v1/notes",
+							"protocol": "https",
+							"host": [
+								"65089a2a56db83a34d9c8c86",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Fazer compras\",\n    \"description\" : \"preciso passar no mercado e fazer minhas compras\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://65089a2a56db83a34d9c8c86.mockapi.io/api/v1/notes/2",
+							"protocol": "https",
+							"host": [
+								"65089a2a56db83a34d9c8c86",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://65089a2a56db83a34d9c8c86.mockapi.io/api/v1/notes/1",
+							"protocol": "https",
+							"host": [
+								"65089a2a56db83a34d9c8c86",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://65089a2a56db83a34d9c8c86.mockapi.io/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"65089a2a56db83a34d9c8c86",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://65089a2a56db83a34d9c8c86.mockapi.io/api/v1/users/13",
+							"protocol": "https",
+							"host": [
+								"65089a2a56db83a34d9c8c86",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Marcelo Eltz\",\n    \"avatar\": \"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/34.jpg\",\n    \"password\": \"12345678\",\n    \"login\": \"marcelo@growdev.com.br\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://65089a2a56db83a34d9c8c86.mockapi.io/api/v1/users",
+							"protocol": "https",
+							"host": [
+								"65089a2a56db83a34d9c8c86",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Marcelo Eltz\",\n    \"avatar\": \"https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/34.jpg\",\n    \"password\": \"12345678we\",\n    \"login\": \"marcelo@growdev.com.br\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://65089a2a56db83a34d9c8c86.mockapi.io/api/v1/users/13",
+							"protocol": "https",
+							"host": [
+								"65089a2a56db83a34d9c8c86",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://65089a2a56db83a34d9c8c86.mockapi.io/api/v1/users/13",
+							"protocol": "https",
+							"host": [
+								"65089a2a56db83a34d9c8c86",
+								"mockapi",
+								"io"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"13"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
