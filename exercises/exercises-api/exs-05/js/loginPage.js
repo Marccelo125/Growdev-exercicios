@@ -10,14 +10,14 @@ button.addEventListener("click", async (event) => {
   await loginUser();
 });
 
+if (localStorage.getItem("usuario")) {
+  location.href = "logged.html";
+}
+
 async function loginUser() {
   try {
     const response = await api.get("/users");
     const users = await response.data;
-
-    if (localStorage.getItem("usuario")) {
-      location.href = "logged.html";
-    }
 
     users.forEach((user) => {
       if (user.login === email.value && user.password === password.value) {
