@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login de usuário</title>
+    <link rel="shortcut icon" href="https://cdn.icon-icons.com/icons2/2622/PNG/512/brand_opera_icon_158771.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+    rel="stylesheet">
+    
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+          <h1 class="title">Ochat</h1>
+          <h2 class="subtitle">
+            Entre agora no Ochat. Na melhor comunidade de FFXIV
+          </h2>
+        </header>
+    
+        <main>
+          <form id="form-edit-message">
+    
+            <div class="form-control">
+              <label for="title">Email</label>
+              <input required type="email" id="email" placeholder="user@email.com" value="" />
+            </div>
+            
+            <div class="form-control">
+              <label for="password">Senha</label>
+              <input required type="password" name="password" id="password" placeholder="Sua senha aqui">
+            </div>
+    
+            <button class="btn-submit" type="submit">Entrar</button>
+            <small>Se você não tem uma conta. <a href="./index.html">Cadastrar-se</a></small>
+          </form>
+        </main>
+      </div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="./js/api.js"></script>
+      <script src="./js/loginPage.js"></script>
+    </body>
+</html>
