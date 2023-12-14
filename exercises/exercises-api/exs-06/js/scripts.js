@@ -68,6 +68,8 @@ async function fetchMessages(page) {
       });
     });
 
+    paginacao();
+
     if (messages.length === 0) {
       const h3 = document.createElement("h3");
       h3.textContent = "Nenhum recado cadastrado.";
@@ -96,15 +98,31 @@ nextPage.addEventListener("click", () => {
   }
 });
 
-async function numberPage(page) {
-  await fetchMessages(currentPage);
+function paginacao() {
   const pageNumbers = document.getElementById("pageNumbers");
 
-  if (!pageNumbers.children.length) {
-    for (let contador = 1; contador <= totalPages; contador++) {
-      pageNumbers.innerHTML += `<button onclick=fetchMessages(${contador}) >${contador}</button>`;
-    }
-  }
+  const buttonAnteriorHTML = currentPage > 1 ? `<button id="btn-anterior" onclick=changePage(${currentPage - 1})> ${currentPage - 1} </button>` : '';
+  const buttonAtualHTML = `<button onclick=changePage(${currentPage})> ${currentPage} </button>`;
+  const buttonPosteriorHTML = currentPage < totalPages ? `<button id="btn-posterior" onclick=changePage(${currentPage + 1})> ${currentPage + 1} </button>` : '';
+  const buttonFinalHTML = currentPage + 1 === totalPages || currentPage === totalPages ? '' : `
+  <span>...</span>
+  <button id="btn-posterior" onclick=changePage(${totalPages})> ${totalPages} </button>
+  `;
+
+  pageNumbers.innerHTML = `
+    ${buttonAnteriorHTML}
+    ${buttonAtualHTML}
+    ${buttonPosteriorHTML}
+    ${buttonFinalHTML}
+  `;
 }
 
-numberPage(currentPage);
+function changePage(newPage) {
+  if (newPage >= 1 && newPage <= totalPages) {
+    currentPage = newPage;
+    paginacao();
+    fetchMessages(currentPage);
+  }
+}
+paginacao();
+fetchMessages();
