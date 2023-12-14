@@ -149,6 +149,26 @@ a {
   background: #0a936a;
 }
 
+#newMessageButton {
+  height: 3.5rem;
+  width: 100%;
+  padding: 0px 1.5rem;
+  border-radius: 16px;
+  background: #087F5B;
+  margin-bottom: 1.5rem;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: ease .2s;
+}
+
+#newMessageButton:hover {
+  background: #0a936a;
+}
+
 /* Estilos dos cards de recado */
 .card {
   background-color: #fff;
