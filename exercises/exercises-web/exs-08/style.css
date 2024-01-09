@@ -1,0 +1,77 @@
+:root {
+    --laranja: #f69804;
+    --azul: #10538e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+section {
+    margin: 25vh;
+    margin-top: 5vh;
+    border: 2px solid black;
+}
+
+article {
+    display: flex;
+}
+
+.bola-azul {
+    width: 100px;
+    height: 100px;
+    background-color: var(--azul);
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+.bola-laranja {
+    width: 100px;
+    height: 100px;
+    background-color: var(--laranja);
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+.container-01 {
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.container-02 {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.quadrado-azul {
+    width: 100px;
+    height: 100px;
+    background-color: var(--azul);
+    border: 2px solid black;
+}
+
+.bola-laranja-2 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--laranja);
+    border: 2px solid black;
+    border-radius: 100%;
+}
+
+.div-bola {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div-quadrados {
+    display: flex;
+    justify-content: space-between;
+}
