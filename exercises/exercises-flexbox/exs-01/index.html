@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício 01 - Flexbox</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <nav>
+      <header>
+        <input style="flex-grow: 1" type="text" placeholder="insert text" />
+        <div id="dot-1">◯</div>
+        <div id="dot-2">◯</div>
+        <div id="dot-3">◯</div>
+      </header>
+      <section>
+        <article>
+          <p>Aug 14, 2016</p>
+        </article>
+        <article>
+          <a href="#">Sign Up</a>
+          <a href="#">Login</a>
+        </article>
+      </section>
+    </nav>
+    <main>
+      <header>
+        <section id="banner-header">
+          <article>
+            <a href="#">Subscribe</a>
+          </article>
+          <article><img src="#" alt="" />AwesomeLogo</article>
+          <article>
+            <img src="#" alt="" />Social1 <img src="#" alt="" />Social2
+            <img src="#" alt="" />Social3
+          </article>
+        </section>
+      </header>
+      <div class="container">
+          <section class="squares-list">
+            <div class="item order-primary" style="background: yellow">5</div>
+            <div class="item" style="background: blue">2</div>
+            <div class="item" style="background: red">3</div>
+            <div class="item" style="background: green">4</div>
+            <div class="item order-last" style="background: pink">1</div>
+          </section>
+      </div>
+      <footer class="footer">
+        <div style="flex-grow: 0"></div>
+        <div class="footer-div" style="background-color: rgb(181, 196, 245);"></div>
+        <div style="flex-grow: 0"></div>
+      </footer>
+    </main>
+  </body>
+</html>
