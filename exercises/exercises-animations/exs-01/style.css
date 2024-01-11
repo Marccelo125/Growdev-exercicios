@@ -1,0 +1,51 @@
+:root {
+    --bg-red: red;
+    --bg-blue: blue;
+    --bg-yellow: yellow;
+    --bg-green: green;
+}
+
+.element, .element-2 {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+.element {
+    background: var(--bg-red);
+    animation: squareInMove 5s infinite;
+}
+
+.element-2 {
+    background: var(--bg-red);
+    animation: squareInMove 5s infinite;
+    animation-delay: 2.5s;
+}
+
+@keyframes squareInMove {
+    0% {
+        top: 0px;
+        left: 0px;
+        background: var(--bg-red);
+    }
+    25% {
+        top: 0px;
+        left: 300px;
+        background: var(--bg-blue);
+    }
+    50% {
+        top: 300px;
+        left: 300px;
+        background: var(--bg-yellow);
+    }
+    75% {
+        top: 300px;
+        left: 0px;
+        background: var(--bg-green);
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        background: var(--bg-red);
+    }
+}
