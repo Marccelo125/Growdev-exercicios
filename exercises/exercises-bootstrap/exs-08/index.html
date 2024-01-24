@@ -1,208 +1,156 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-  </head>
+<html lang="en">
 
-  <body>
-    <main class="container-fluid">
-      <div class="container vh-100 d-flex flex-column my-4">
-        <header class="row header align-items-center">
-          <img class="logo h-25" src="./images/logo.svg" alt="#" />
-          <h1 class="title text-center">Fazer login em sua conta</h1>
-        </header>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+</head>
 
-        <div
-          class="container d-flex flex-column justify-content-center my-1"
-          style="width: 55%"
-        >
-          <div class="row d-flex justify-content-center">
-            <div class="col-6 d-flex justify-content-center">
-              <button type="button" class="btn btn-primary btn-md w-100">
-                ENTRAR COM FACEBOOK
-              </button>
+<body>
+  <main class="container-fluid">
+    <div class="container my-4">
+      <header class="row d-flex justify-content-center header">
+        <img class="logo w-25" src="./images/logo.svg" alt="#" />
+        <h1 class="title text-center fs-2">Fazer login em sua conta</h1>
+      </header>
+
+      <div class="container d-flex flex-column justify-content-center my-2" style="width: 55%;">
+        <div class="row d-flex justify-content-center">
+          <div class="col-6 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary btn-md w-100">ENTRAR COM FACEBOOK</button>
+          </div>
+          <div class="col-6 d-flex justify-content-center">
+            <button type="button" class="btn btn-primary btn-md w-100">ENTRAR COM GOOGLE</button>
+          </div>
+          <div class="col-12 d-flex justify-content-center mt-2">
+            ou entrar com endereço de email
+          </div>
+        </div>
+
+        <form class="row needs-validation" id="form-login" novalidate>
+          <div class="col-12 my-2">
+            <label for="username" class="mb-2">E-mail:</label>
+            <input type="email" class="form-control" id="email-login" placeholder="Digite seu usuário" required>
+            <div class="valid-feedback">
+              Tudo certo!
             </div>
-            <div class="col-6 d-flex justify-content-center">
-              <button type="button" class="btn btn-primary btn-md w-100">
-                ENTRAR COM GOOGLE
-              </button>
-            </div>
-            <div class="col-12 d-flex justify-content-center mt-2">
-              ou entrar com endereço de email
+            <div class="invalid-feedback">
+              Forneça um email válido.
             </div>
           </div>
 
-          <form class="row needs-validation" id="form-login" novalidate>
-            <div class="col-12 my-2">
-              <label for="username" class="mb-2">E-mail:</label>
-              <input
-                type="email"
-                class="form-control"
-                id="email-login"
-                placeholder="Digite seu usuário"
-                required
-              />
-              <div class="valid-feedback">Tudo certo!</div>
-              <div class="invalid-feedback">Forneça um email válido.</div>
+          <div class="col-12 my-2">
+            <label for="password" class="mb-2">Password:</label>
+            <input type="password" class="form-control" id="password-login" placeholder="Digite sua senha" required>
+            <div class="valid-feedback">
+              Tudo certo!
             </div>
-
-            <div class="col-12 my-2">
-              <label for="password" class="mb-2">Password:</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password-login"
-                placeholder="Digite sua senha"
-                required
-              />
-              <div class="valid-feedback">Tudo certo!</div>
-              <div class="invalid-feedback">Senha inválida.</div>
+            <div class="invalid-feedback">
+              Senha inválida.
             </div>
+          </div>
 
-            <div class="col-12 my-2">
-              <button type="submit" class="btn btn-primary btn-md w-100">
-                Entrar
-              </button>
-            </div>
-            <div class="col mt-2">
-              <p>
-                Não possuí uma conta?
-                <a
-                  class="text-decoration-none"
-                  data-bs-toggle="modal"
-                  data-bs-target="#staticBackdrop"
-                  href="#"
-                  >Criar conta</a
-                >
-              </p>
-            </div>
-          </form>
+          <div class="col-12 my-2">
+            <button type="submit" class="btn btn-primary btn-md w-100">Entrar</button>
+          </div>
+          <div class="col mt-2">
+            <p> Não possuí uma conta?
+              <a class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#">Criar conta</a></p>
+          </div>
+        </form>
 
-          <!-- Modal -->
-          <div
-            class="modal fade"
-            id="staticBackdrop"
-            data-bs-backdrop="static"
-            data-bs-keyboard="false"
-            tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                    Cadastre sua conta
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
-                </div>
-                <div class="modal-body">
-                  <form id="form-new-user" class="needs-validation" novalidate>
-                    <div class="form-group">
-                      <label for="nome-user">Usuário:</label>
-                      <input
-                        required
-                        class="form-control"
-                        id="name"
-                        type="text"
-                        aria-label="default input example"
-                      />
-                      <div class="valid-feedback">Tudo certo!</div>
-                      <div class="invalid-feedback">
-                        Insira seu nome de usuário.
-                      </div>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                  Cadastre sua conta
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form id="form-new-user" class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <label for="nome-user">Usuário:</label>
+                    <input required class="form-control" id="name" type="text" aria-label="default input example">
+                    <div class="valid-feedback">
+                      Tudo certo!
                     </div>
-
-                    <div class="form-group my-4">
-                      <label for="email-user">E-mail:</label>
-                      <input
-                        required
-                        class="form-control"
-                        id="email"
-                        type="email"
-                        aria-label="default input example"
-                      />
-                      <div class="valid-feedback">Tudo certo!</div>
-                      <div class="invalid-feedback">
-                        Forneça um email válido.
-                      </div>
+                    <div class="invalid-feedback">
+                      Insira seu nome de usuário.
                     </div>
+                  </div>
 
-                    <div class="my-4">
-                      <label for="password" class="form-label">Senha:</label>
-                      <input
-                        type="password"
-                        id="password"
-                        required
-                        placeholder=""
-                        class="form-control"
-                      />
-                      <div class="valid-feedback">Tudo certo!</div>
-                      <div class="invalid-feedback">
-                        A senha deve conter mais de 5 caractéres.
-                      </div>
+                  <div class="form-group my-2">
+                    <label for="email-user">E-mail:</label>
+                    <input required class="form-control" id="email" type="email" aria-label="default input example">
+                    <div class="valid-feedback">
+                      Tudo certo!
                     </div>
+                    <div class="invalid-feedback">
+                      Forneça um email válido.
+                    </div>
+                  </div>
 
-                    <div class="container d-flex justify-content-between">
-                      <div class="row vw-100 g-3">
-                        <button class="btn btn-primary" type="submit">
-                          Cadastrar-se
-                        </button>
-                        <button
-                          class="btn btn-secondary"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                          type="submit"
-                        >
-                          Cancelar
-                        </button>
-                      </div>
+                  <div class="my-2">
+                    <label for="password" class="form-label">Senha:</label>
+                    <input type="password" id="password" required placeholder="" class="form-control">
+                    <div class="valid-feedback">
+                      Tudo certo!
                     </div>
-                    <div id="alertModal"></div>
-                  </form>
-                </div>
+                    <div class="invalid-feedback">
+                      A senha deve conter mais de 5 caractéres.
+                    </div>
+                  </div>
+
+                  <div class="my-2">
+                    <label for="password-rep" class="form-label">Repita a Senha:</label>
+                    <input type="password" id="password-rep" required placeholder="" class="form-control">
+                    <div class="valid-feedback">
+                      Tudo certo!
+                    </div>
+                    <div class="invalid-feedback">
+                      A senhas não são iguais.
+                    </div>
+                  </div>
+
+                  <div class="container d-flex justify-content-between">
+                    <div class="row vw-100 g-3">
+                      <button class="btn btn-primary" type="submit">Cadastrar-se</button>
+                      <button class="btn btn-secondary" data-bs-dismiss="modal" aria-label="Close" type="submit">Cancelar</button>
+                    </div>
+                  </div>
+                  <div id="alertModal"></div>
+                  <div id="alertModalWarning"></div>
+                </form>
               </div>
             </div>
           </div>
-          <!-- END MODAL -->
-          <div id="alertLogin"></div>
         </div>
+        <!-- END MODAL -->
+        <div id="alertLogin"></div>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <script
-      src="https://kit.fontawesome.com/f9e19193d6.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="./js/api.js"></script>
-    <script src="./js/alert.js"></script>
-    <script src="./js/login.js"></script>
-    <script src="./js/newUser.js"></script>
-    <script src="./js/validationForms.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+  <script src="https://kit.fontawesome.com/f9e19193d6.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/alert.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/newUser.js"></script>
+  <script src="./js/validationForms.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
 </html>

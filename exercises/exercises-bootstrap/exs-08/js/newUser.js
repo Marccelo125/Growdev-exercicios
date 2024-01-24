@@ -2,6 +2,7 @@ const formNewUser = document.getElementById('form-new-user');
 const nameInputRegister = document.getElementById('name');
 const emailInputRegister = document.getElementById('email');
 const passwordInputRegister = document.getElementById('password');
+const passwordInputRegisterRep = document.getElementById('password-rep');
 
 formNewUser.addEventListener('submit', async (e) => {
   e.preventDefault(); // Impedir comportamento padrão do submit
@@ -9,12 +10,19 @@ formNewUser.addEventListener('submit', async (e) => {
   const nameValue = nameInputRegister.value.trim();
   const emailValue = emailInputRegister.value.trim();
   const passwordValue = passwordInputRegister.value.trim();
+  const passwordRepValue = passwordInputRegisterRep.value.trim()
 
   if (!nameValue || !isValidEmail(emailValue) || !passwordValue || passwordValue.length < 5) {
-    console.log("aaaa");
     setAlertModal("Verifique os campos e tente novamente", 'danger');
+    
+    if (passwordRepValue != passwordValue) {
+      setAlertModalWarning("As senhas devem ser iguais", 'warning');
+      return;
+    }
     return;
   }
+
+
 
   const newUser = {
     name: nameValue,

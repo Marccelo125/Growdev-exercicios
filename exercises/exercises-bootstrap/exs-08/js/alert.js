@@ -20,3 +20,12 @@ function setAlertModal(message, type) {
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>`;
 }
+
+function setAlertModalWarning(message, type) {
+  const alertModal = document.getElementById("alertModalWarning");
+  alertModal.innerHTML = `
+  <div class="alert alert-${type} alert-dismissible fade show mt-4" role="alert" >
+    <strong>${message}</strong> Verifique os campos!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>`;
+}
