@@ -12,17 +12,21 @@ formNewUser.addEventListener('submit', async (e) => {
   const passwordValue = passwordInputRegister.value.trim();
   const passwordRepValue = passwordInputRegisterRep.value.trim()
 
-  if (!nameValue || !isValidEmail(emailValue) || !passwordValue || passwordValue.length < 5) {
-    setAlertModal("Verifique os campos e tente novamente", 'danger');
-    
+  if (
+    !nameValue ||
+    !isValidEmail(emailValue) ||
+    !passwordValue ||
+    passwordValue.length < 5 ||
+    passwordRepValue != passwordValue
+  ) {
+    setAlertModal("Verifique os campos e tente novamente", "danger");
+
     if (passwordRepValue != passwordValue) {
-      setAlertModalWarning("As senhas devem ser iguais", 'warning');
+      setAlertModalWarning("As senhas devem ser iguais", "warning");
       return;
     }
     return;
   }
-
-
 
   const newUser = {
     name: nameValue,
